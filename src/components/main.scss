@@ -1,0 +1,52 @@
+.main-container {
+  .main-content {
+    position: relative; // 'display: relative;'를 'position: relative;'로 수정
+    background-image: url('../../public/img/main.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(10px);
+  }
+
+
+
+  .nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 200px;
+
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 10;
+    position: relative; // 'absolute'에서 'relative'로 변경하여 위치 조정
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 100px;
+    font-weight: bold;
+
+
+  }
+  li{
+    margin-top: 40px;
+    font-size: 30px;
+
+  }
+}
