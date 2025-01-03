@@ -1,12 +1,11 @@
 import React from 'react';
-import './page/App.scss';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './page/Home';
 import Price from './page/Price.jsx'; 
 import Weather from './page/Weather';
 import Air from './page/Air';
 import Trips from './page/Trips';
-
+import './App.scss';
 function App() {
   return (
     <Router>

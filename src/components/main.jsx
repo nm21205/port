@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './main.scss';
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
@@ -9,10 +9,10 @@ import { FaArrowRight } from "react-icons/fa6";
 
 const Main = () => {
   const background = [
-    'public/img/main1.png',
-    'public/img/main2.png',
-    'public/img/main3.png',
-  ]
+    process.env.PUBLIC_URL + '/img/main1.png', // 절대 경로로 설정
+    process.env.PUBLIC_URL + '/img/main2.png',
+    process.env.PUBLIC_URL + '/img/main3.png'
+  ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -23,11 +23,6 @@ const Main = () => {
   const nextClick = () => {
     setCurrentIndex((prevIndex) => prevIndex === background.length - 1 ? 0 : prevIndex + 1);
   }
-
-
-
-
-
 
   return (
     <div>
@@ -41,15 +36,20 @@ const Main = () => {
               <li>여행사</li>
               <li>도착지 날씨</li>
             </ul>
+
           </nav>
-          <div className='main-title'>
-          <FaArrowLeft onClick={handleClick} className='arrow-left'/>
 
-          <h3>새로운여행</h3>
-          <FaArrowRight onClick={nextClick} className='arrow-right'/>
 
-          </div>
         </div>
+
+        
+        <div className='main-title-container'>
+            <div className='main-title'>
+              <FaArrowLeft onClick={handleClick} className='arrow-left' />
+              <h3>새로운 세상</h3>
+              <FaArrowRight onClick={nextClick} className='arrow-right' />
+            </div>
+          </div>
       </div>
     </div>
   );

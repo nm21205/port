@@ -1,0 +1,30 @@
+.intro-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.intro-container {
+  display: flex;
+  overflow: hidden;
+  width: 80%;
+  position: relative;
+}
+
+.intro-title {
+  min-width: 25%; /* 4개의 요소가 보이도록 설정 */
+  flex-shrink: 0; /* 요소가 줄어들지 않도록 설정 */
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
