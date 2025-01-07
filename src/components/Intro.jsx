@@ -2,7 +2,6 @@ import React,{useState} from 'react';
 import data from '../data/data';
 import {Link} from 'react-router-dom';
 import { Navigation,Autoplay} from 'swiper/modules';
-
 import { Swiper, SwiperSlide } from 'swiper/react';
 import './Intro.scss';
 
@@ -15,8 +14,8 @@ const Location = () => {
   const [dataLocation] = useState(data)
   return (
     <div className='location'>
-        <h2>Location</h2>
-        <p>신규 가맹점..</p>
+        <h2>Hello World</h2>
+        <p>여행 상품</p>
         <div className="slideLocation">
           <Swiper
             className='locationSwiper'
@@ -26,10 +25,10 @@ const Location = () => {
             navigation
            loop={true}
            autoplay={{
-            delay: 0,
+            delay: 2000,
             disableOnInteraction: false,
            }}
-           speed={5000}
+           speed={1000}
            loopAdditionalSlides={1}
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log('slide change')}

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './main.scss';
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
@@ -24,19 +25,22 @@ const Main = () => {
     setCurrentIndex((prevIndex) => prevIndex === background.length - 1 ? 0 : prevIndex + 1);
   }
 
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  }
+
   return (
     <div>
       <div className="main-container" style={{ backgroundImage: `url(${background[currentIndex]})` }}>
         <div className="main-content">
           <nav>
             <ul>
-              <li>Home</li>
-              <li>특가</li>
-              <li>항공</li>
-              <li>여행사</li>
-              <li>도착지 날씨</li>
+              <li><Link to="/" onClick={scrollToTop}>Home</Link></li>
+              <li><Link to="/price" onClick={scrollToTop}>특가</Link></li>
+              <li><Link to="/trips" onClick={scrollToTop}>전체 일정</Link></li>
+              <li><Link to="/air" onClick={scrollToTop}>여행사</Link></li>
+              <li><Link to="/weather" onClick={scrollToTop}>도착지 날씨</Link></li>
             </ul>
-
           </nav>
 
 
