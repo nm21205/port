@@ -1,12 +1,13 @@
 // src/page/Homepage.jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Route } from 'react-router-dom';
+
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import WeatherDetails from './Weatherdetails.jsx';
 import Footer from '../components/Footer';
 import Main from '../components/main';
+
+import '../page/Weather.scss';
 
 
 const apiKey = process.env.REACT_APP_WEATHER_API_KEY;

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import gsap from 'gsap';
 import './Price.scss';
 import priceData from '../data/priceData';
 import Main from '../components/main';
@@ -16,6 +17,15 @@ const Price = () => {
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
+
+  useEffect(() => {
+    gsap.from('.price-wrap', {
+      duration: 1,
+      y: 50,
+      opacity: 0,
+      ease: "power3.out"
+    });
+  }, []);
 
   return (
     <>
@@ -47,7 +57,7 @@ const Price = () => {
                 <td>{item.date} ({item.duration})</td>
                 <td className="title">{item.title} ({item.route})</td>
                 <td>{item.seats}</td>
-                <td>{item.status}</td>
+                <td className="status">{item.status}</td>
                 <td><button>보기</button></td>
               </tr>
             ))}

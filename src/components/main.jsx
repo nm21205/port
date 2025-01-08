@@ -4,13 +4,9 @@ import './main.scss';
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
 
-
-
-
-
 const Main = () => {
   const background = [
-    process.env.PUBLIC_URL + '/img/main1.png', // 절대 경로로 설정
+    process.env.PUBLIC_URL + '/img/main1.png',
     process.env.PUBLIC_URL + '/img/main2.png',
     process.env.PUBLIC_URL + '/img/main3.png'
   ];
@@ -43,17 +39,14 @@ const Main = () => {
             </ul>
           </nav>
 
-
-        </div>
-
-        
-        <div className='main-title-container'>
+          <div className='main-title-container'>
             <div className='main-title'>
               <FaArrowLeft onClick={handleClick} className='arrow-left' />
-              <h3>새로운 세상</h3>
+              <h3>여행의 즐거움</h3>
               <FaArrowRight onClick={nextClick} className='arrow-right' />
             </div>
           </div>
+        </div>
       </div>
     </div>
   );

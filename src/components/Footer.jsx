@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <div className="footer-section">
+        <div className="footer-section1">
           <h3>회사 정보</h3>
           <p>상호명: 여행사</p>
           <p>대표: 홍길동</p>
@@ -18,7 +18,7 @@ const Footer = () => {
           <p>관광사업자등록번호: 제2023-123456호</p>
         </div>
         
-        <div className="footer-section">
+        <div className="footer-section2">
           <h3>고객센터</h3>
           <p>전화: 1234-5678</p>
           <p>이메일: support@travel.com</p>
@@ -26,7 +26,7 @@ const Footer = () => {
           <p>주소: 서울시 강남구 여행로 123</p>
         </div>
 
-        <div className="footer-section">
+        <div className="footer-section3">
           <h3>빠른 링크</h3>
           <ul>
             <li><Link to="/" onClick={scrollToTop}>처음으로</Link></li>
